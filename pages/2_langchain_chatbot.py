@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import time
 
-st.title("Streaming Chatbot")
+st.title("Langchain Chatbot")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
