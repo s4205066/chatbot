@@ -1,15 +1,19 @@
 import streamlit as st
-from langchain_openai import OpenAI
 import time
+
+from langchain_community.chat_models import ChatOpenAI
+
 
 st.title("Langchain Chatbot")
 
 api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 
-llm = OpenAI(openai_api_key = api_key)
+openai = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key = api_key)
 
 def response_generator(message):
-    response = llm.invoke(message)
+    chatAPIResponse = openai.invoke(message)
+
+    response = chatAPIResponse.content
 
     for word in response.split():
         yield word + " "
