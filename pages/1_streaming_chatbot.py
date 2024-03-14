@@ -12,7 +12,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 if prompt := st.chat_input("Enter Message:"):
-    with st.chat_message("user"):
+    with st.chat_message("assistant"):
         st.markdown(prompt)
 
     st.session_state.message.append({"role": "user", "content": prompt})
@@ -29,4 +29,10 @@ def response_generator():
     for word in response.split():
         yield word + " "
         time.sleep(0.05)
+
+with st.chat_message("assistant"):
+    response = st.write_stream(response_generator())
+
+st.session_state.messages.append({"role": "user", "content": response})
+
 
