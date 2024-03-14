@@ -4,7 +4,7 @@ import time
 
 st.title("Streaming Chatbot")
 
-if "messages" not in st.session_state:
+if "stream_messages" not in st.session_state:
     st.session_state.stream_messages = []
 
 for message in st.session_state.stream_messages:

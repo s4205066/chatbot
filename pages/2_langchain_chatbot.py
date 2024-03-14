@@ -4,7 +4,7 @@ import time
 
 st.title("Langchain Chatbot")
 
-if "messages" not in st.session_state:
+if "langchain_messages" not in st.session_state:
     st.session_state.langchain_messages = []
 
 for message in st.session_state.langchain_messages:
