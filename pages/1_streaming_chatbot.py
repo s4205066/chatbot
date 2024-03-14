@@ -15,7 +15,7 @@ if prompt := st.chat_input("Enter Message:"):
     with st.chat_message("assistant"):
         st.markdown(prompt)
 
-    st.session_state.message.append({"role": "user", "content": prompt})
+    st.session_state.messages.append({"role": "user", "content": prompt})
 
 def response_generator():
     response = random.choice(
