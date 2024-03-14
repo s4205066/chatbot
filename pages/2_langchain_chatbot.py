@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain import OpenAI
+from langchain_openai import OpenAI
 import time
 
 st.title("Langchain Chatbot")
