@@ -8,7 +8,7 @@ if "messages" not in st.session_state:
 
 for message in st.session_state.messages:
     if message["role"] == "user":
-        st.chat_message(message["role"], avatar="👍").write(message["content"])
+        st.chat_message(message["role"], avatar="😀").write(message["content"])
     else:
         st.chat_message(message["role"], avatar="💬").write(message["content"])
 
