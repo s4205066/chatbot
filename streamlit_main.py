@@ -20,7 +20,7 @@ def generate_response():
         yield token
 
 if prompt := st.chat_input():
-    st.session_state.message.append({"role": "user", "content": prompt})
+    st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user", avatar="👍").write(prompt)
     st.session_state["full_message"] = ""
     st.chat_message("assistant", avatar="💬").write_stream(generate_response)
