@@ -14,14 +14,15 @@ if "messages" not in st.session_state.keys():
         {"role": "assistant", "content": "Ask me a question!"}
     ]
 
-OpenAI.api_key = st.secrets.openai_key
+llm = OpenAI(api_key = st.secrets.openai_key)
+
 
 @st.cache_resource(show_spinner=False)
 def load_data():
     with st.spinner(text="Loading data."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        llm = openai(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on the University of Gloucestershire and your job is to answer questions. Assume that all questions are related to the University of Gloucestershire. Keep your answers professional and based on facts – do not hallucinate features.")
+        llm = openai.OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on the University of Gloucestershire and your job is to answer questions. Assume that all questions are related to the University of Gloucestershire. Keep your answers professional and based on facts – do not hallucinate features.")
         service_context = ServiceContext.from_defaults(llm)
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
