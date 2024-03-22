@@ -1,2 +1,5 @@
 streamlit
 ollama
+openai
+llama-index
+nltk
