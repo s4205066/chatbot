@@ -1,3 +1,0 @@
-.sllv-button{position:absolute;top:50%;left:50%;transform:translate3d(-50%,-50%,0);background:rgba(0,0,0,0);border:0;cursor:pointer;transition:.2s ease-in-out opacity;will-change:opacity;width:100px}
-.sllv-button:focus-visible{opacity:.6}.sllv-embed{cursor:pointer;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;background:#e2e2e2 center/cover no-repeat}
-.sllv-embed:hover .sllv-button{opacity:.6}
