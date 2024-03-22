@@ -4,3 +4,4 @@ openai
 llama-index
 nltk
 llama-index.llms.ollama
+llama-index-embeddings-huggingface
