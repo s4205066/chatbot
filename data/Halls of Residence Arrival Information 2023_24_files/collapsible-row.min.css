@@ -1,0 +1,16 @@
+.is-sr-only{border:none !important;clip:rect(0,0,0,0) !important;height:.01em !important;overflow:hidden !important;padding:0 !important;position:absolute !important;white-space:nowrap !important;width:.01em !important}
+.is-sr-only--fixed{position:fixed;top:0}.collapsibleRow__wrapper{width:100%;list-style:none}
+.collapsibleRow__header{padding:16px;display:none}.collapsibleRow__title{position:relative;padding:16px;cursor:pointer;font-weight:700}
+.collapsibleRow__title::after{content:"";position:absolute;right:16px;top:20px;width:16px;height:16px;background-repeat:no-repeat;background-size:16px;background-position:center;background-image:url(../../img/icons/chev-down.svg);transition:transform .2s ease-in-out;transform:rotate(0)}
+.collapsibleRow__title.has-white-color::after{background-image:url(../../img/icons/chev-down--white.svg)}
+.collapsibleRow__item{width:100%;position:relative;margin-bottom:24px;list-style:none !important}
+.collapsibleRow__item:last-child{margin-bottom:0}.collapsibleRow__item .panel{max-height:0;padding-left:16px;padding-right:16px;padding-top:16px;overflow:hidden;word-break:break-word;display:none}
+.collapsibleRow__item .panel p:last-child{margin-bottom:0}.collapsibleRow__item .panel li:last-child{border:0}
+.collapsibleRow__item .panel li:first-child{margin-top:0}.collapsibleRow__item .panel .accordion__item{list-style:none !important}
+.collapsibleRow .collapsibleRow__wrapper{list-style:none;padding-left:0}.collapsibleRow label{display:block;padding-right:48px;background-color:#f1f1f1}
+.collapsibleRow .panel ul{list-style:initial}.collapsibleRow .panel ol{list-style:numeric}
+.collapsibleRow .panel input[type=checkbox]:focus-visible+label{outline:#00f solid}
+.collapsibleRow_checkbox:focus-visible+label{outline:#000 solid 3px}.collapsibleRow_checkbox:checked~label::after{transform:rotate(-180deg)}
+.collapsibleRow_checkbox:checked~.panel{display:block;max-height:initial}.collapsibleRow_checkbox:checked~.collapsibleRow__header{display:block}
+.hidden{position:absolute;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
+.hidden--fixed{position:fixed;top:0}
