@@ -15,6 +15,7 @@ if "messages" not in st.session_state.keys():
     ]
 
 openai.OpenAI.api_key = st.secrets.openai_key
+print(st.secrets.openai_key)
 
 @st.cache_resource(show_spinner=False)
 def load_data():
