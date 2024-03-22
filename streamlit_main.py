@@ -1,7 +1,6 @@
 import streamlit as st
-from llama_index.core import VectorStoreIndex, ServiceContext
+from llama_index.core import VectorStoreIndex, ServiceContext, SimpleDirectoryReader
 from llama_index.llms import openai
-from llama_index import SimpleDirectoryReader
 
 # https://discuss.streamlit.io/t/adding-a-long-pdf-as-a-custom-data-source/57348
 # https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/
