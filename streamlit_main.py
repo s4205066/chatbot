@@ -1,5 +1,6 @@
 import streamlit as st
 from llama_index.core import VectorStoreIndex, ServiceContext, SimpleDirectoryReader
+from llama_index.llms import openai
 from openai import OpenAI
 
 # https://discuss.streamlit.io/t/adding-a-long-pdf-as-a-custom-data-source/57348
@@ -20,7 +21,7 @@ def load_data():
     with st.spinner(text="Loading data."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        llm = OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on the University of Gloucestershire and your job is to answer questions. Assume that all questions are related to the University of Gloucestershire. Keep your answers professional and based on facts – do not hallucinate features.")
+        llm = openai(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on the University of Gloucestershire and your job is to answer questions. Assume that all questions are related to the University of Gloucestershire. Keep your answers professional and based on facts – do not hallucinate features.")
         service_context = ServiceContext.from_defaults(llm)
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
