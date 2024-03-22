@@ -14,7 +14,7 @@ if "messages" not in st.session_state.keys():
         {"role": "assistant", "content": "Ask me a question!"}
     ]
 
-openai.api_key = st.secrets.openai_key
+openai.OpenAI.api_key = st.secrets.openai_key
 
 @st.cache_resource(show_spinner=False)
 def load_data():
