@@ -4,7 +4,7 @@ from langchain.llms import OpenAI
 apiKey = st.sidebar.text_input('OpenAI API Key')
 
 def generate_response(prompt):
-  llm = OpenAI(temperature=0.5, openai_api_key=apiKey)
+  llm = OpenAI.OpenAI(temperature=0.5, openai_api_key=apiKey)
   st.info(llm(prompt))
 
 with st.form('my_form'):
